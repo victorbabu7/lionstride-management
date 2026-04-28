@@ -10,13 +10,13 @@
     <body>
         <nav> 
             <div class="logo ">LionStride management</div>
-            <ul class="linknav"></ul>
+            <ul class="linknav">
             <li><a href="#home">home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#athletes">Athletes</a></li>
             <li><a href="#contact">Contact</a></li>
-
+            </ul>
             <div class="burger"> &#9776;</div>
         </nav>
         <section id="home">
@@ -24,6 +24,8 @@
                 <h1>Welcome to <span>LionStride</span><span>management</span></h1>
                 <p>Empowering athletes to reach their full potential</p>
                 <a href="#contact" class="buton">Get In Touch</a>
+
+        </div>
          </section>
          <section id="about">
             <div class="about-content">
@@ -35,51 +37,70 @@
 
 <section id="services">
     <h2>Our services</h2>
+
     <div class="services-grid">
         <div class="service-card">
             <h3>Athlete Management</h3>
             <p>Complete career management and support for professional athletes.</p>
+             <button class="btn-more" onclick="openModal('athlete')">See More</button>
         </div>
         <div class="service-card">
             <h3>Scouting</h3>
             <p>Identifying and developing the next generation of sporting talent.</p>
+             <button class="btn-more" onclick="openModal('scouting')">See More</button>
         </div>
         <div class="service-card">
             <h3>Race Placement</h3>
             <p>Strategic placement of athletes in top competitions worldwide.</p>
+             <button class="btn-more" onclick="openModal('race')">See More</button>
         </div>
     </div>
+
 </section>
 <section id="athletes">
-    <h2>Ourathletes</h2>
+<h2>Our athletes</h2>
     <div class="athlete-grille">
-        <div class="athlete-carte"></div>
-        <div class="athlete-img"></div>
+        <div class="athlete-carte">
+        <div class="athlete-img">
+            <img src="image/imageronald.jpeg" alt="babu">
+        </div>
         <h3>babu</h3>
-        <p>athlete pro </p>
-
-         <div class="athlete-carte"></div>
-        <div class="athlete-img"></div>
-        <h3>victor</h3>
-        <p>athlete pro </p>
-
-         <div class="athlete-carte"></div>
-        <div class="athlete-img"></div>
-        <h3>joyce baho </h3>
-        <p>karateka  </p>
-
-         <div class="athlete-carte"></div>
-        <div class="athlete-img"></div>
-        <h3>issac bumizi</h3>
-        <p>swimingp </p>
-
-         <div class="athlete-carte"></div>
-        <div class="athlete-img"></div>
-        <h3>toutou yvve</h3>
-        <p>boxing </p>
+        <p>athlete  football </p>
+        <div class="athlete-stats">
+            <p><strong>Age:</strong> 24 years</p>
+            <p><strong>Weight:</strong> 78 kg</p>
+            <p><strong>Height:</strong> 182 cm</p>
+        </div>
     </div>
-</section>
 
+    <div class="athlete-carte">
+        <div class="athlete-img">
+            <img src="image/imagekaret.jpeg" alt="issac mugis ">
+        </div>
+        <h3>victor mugis</h3>
+        <p>athlete karateka </p>
+        <div class="athlete-stats">
+            <p><strong>Age:</strong> 26 years</p>
+            <p><strong>Weight:</strong> 82 kg</p>
+            <p><strong>Height:</strong> 185 cm</p>
+        </div>
+    </div>
+
+    <div class="athlete-carte">
+        <div class="athlete-img">
+            <img src="image/imagevalb.jpeg" alt="joyce baho ">
+        </div>
+        <h3>joyce baho </h3>
+        <p> athlete vb</p>
+        <div class="athlete-stats">
+            <p><strong>Age:</strong> 22 years</p>
+            <p><strong>Weight:</strong> 65 kg</p>
+            <p><strong>Height:</strong> 172 cm</p>
+        </div>
+    </div>
+
+   </div>
+</section>
 <section id="contact">
     <h2>contact us </h2>
      <div class="contact-form">
@@ -89,8 +110,17 @@
         <button class="btn">Send Message</button>
     </div>
 </section>
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="modal-close"onclick="closeModal()">&times;</span>
+        <h2 id="modal-title"></h2>
+        <p id="modal-text"></p>
+    </div>
+</div>
+
 <footer>
     <p>&copy; 2026 LionStride Management.</p>
 </footer>
+    <script src="js/main.js"></script>
     </body>
 </html>

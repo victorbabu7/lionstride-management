@@ -1,10 +1,10 @@
 :root {
-    --black:  #110101;
-    --dark:   #241919;
+    --black:  #e6e3e3;
+    --dark:   #eef5e9;
     --dark2:  #E8E8E8;
-    --gold:   #4e523f;
+    --gold:   #86740c00;
     --gold-light: #333333;
-    --white:  hsl(240, 43%, 99%);
+    --white:  hsl(240, 100%, 1%);
     --muted:  rgba(20, 20, 20, 0.65);
     --font-display: 'Calibri', 'Gill Sans', sans-serif;
     --font-body: 'Calibri', Arial, sans-serif;

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin page  </title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="admin-body">
+
+<header class="admin-header">
+  <div class="logo">Lion stride — Admin</div>
+  <a href="index.html" class="admin-back"> see the principal page</a>
+</header>
+
+<div class="admin-tabs">
+<div class="admin-tab active" onclick="adminTab('athletes')">athletes</div>
+  <div class="admin-tab" onclick="adminTab('news')">News </div>
+  <div class="admin-tab" onclick="adminTab('services')"> Service  </div>
+  <div class ="admin-tab" onclick="adminTab('messages')">  message  </div>
+
+</div>
+
+<div class="admin-panel active" id="admin-panel-athletes">
+  <h2 class="admin-title">add a athlete</h2>
+
+  <div class="admin-form-group">
+    <label>name </label>
+    <input type="text"id="ath-name" placeholder="Ex: mwendanga babu victor">
+  </div>
+  <div class="admin-form-group">
+    <label>Sport</label>
+    <input type="text" id="ath-sport" placeholder="Ex: Football">
+  </div>
+  <div class="admin-form-row">
+    <div class="admin-form-group">
+      <label>age</label>
+      <input type="number" id="ath-age" placeholder="24">
+    </div>
+    <div class="admin-form-group">
+      <label>weight(kg)</label>
+      <input type="number" id="ath-weight" placeholder="78">
+    </div>
+    <div class="admin-form-group">
+      <label>height (cm)</label>
+      <input type="number" id="ath-height" placeholder="182">
+    </div>
+  </div>
+  <div class="admin-form-group">
+    <label>URL image</label>
+    <input type="text" id="ath-img" placeholder="image/picture.jpg">
+  </div>
+  <button class="admin-btn-add" onclick="adminAddAthlete()">+ add on the principal page</button>
+  <div class="admin-list" id="admin-athletes-list"></div>
+</div>
+
+<div class="admin-panel" id="admin-panel-news">
+  <h2 class="admin-title">add a  new news</h2>
+
+  <div class="admin-form-group">
+    <label> new title</label>
+    <input type="text" id="news-title" placeholder="Ex: victor succeed in yesteday mach , good perfomency">
+  </div>
+  <div class="admin-form-group">
+    <label>text</label>
+    <textarea id="news-text" placeholder="News content.."></textarea>
+  </div>
+  <button class="admin-btn-add" onclick="adminAddNews()">+ add</button>
+  <div class="admin-list" id="admin-news-list"></div>
+</div>
+
+
+<div class="admin-panel" id="admin-panel-services">
+  <h2 class="admin-title">service edit </h2>
+
+  <div class="admin-service-block">
+    <h3 class="admin-service-name">Athlete Management</h3>
+    <div class="admin-form-group">
+      <label>text card</label>
+      <textarea id="svc-athlete-short"></textarea>
+    </div>
+    
+  </div>
+
+  <div class="admin-service-block">
+    <h3 class="admin-service-name">Scouting</h3>
+    <div class="admin-form-group">
+    <label>card text</label>
+    <textarea id="svc-scouting-short"></textarea>
+    </div>
+    
+  </div>
+  
+  <div class="admin-service-block">
+    <h3 class="admin-service-name">Race Placement</h3>
+    <div class="admin-form-group">
+      <label>card text</label>
+      <textarea id="svc-race-short"></textarea>
+    </div>
+  
+  </div>
+
+  <button class="admin-btn-save" onclick="adminSaveServices()"> dane save </button>
+</div>
+
+<div class="admin-panel" id="admin-panel-messages">
+  <h2 class="admin-title"> receved message</h2>
+  <div class="admin-list" id="admin-messages-list"></div>
+</div>
+
+<div class="admin-toast" id="admin-toast"></div>
+
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
